@@ -1,0 +1,28 @@
+.products {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+}
+.product-display {
+    display: flex;
+    flex-flow: wrap column;
+}
+.purchase {
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 1em;
+}
+.product-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: fit-content;
+    width: 75%;
+    font-size: 2em;
+    background-color: rgb(0, 89, 255);
+    color: rgb(212, 208, 208);
+}
+.product-button:hover {
+    color: whitesmoke;
+}

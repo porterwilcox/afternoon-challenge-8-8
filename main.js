@@ -3,7 +3,7 @@ import StoreController from "./app/components/storeController.js";
 class App {
     constructor(){
         this.controllers = {
-            myStoreController: new StoreController()
+            storeController: new StoreController()
         }
     }
 }

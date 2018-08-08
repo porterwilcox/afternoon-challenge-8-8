@@ -7,11 +7,11 @@ class Store {
     ) {
         this.name = name;
         this.products = [
-            new Product("quick draws", 8, 59.95), 
-            new Product("runners", 17, 6.99), 
-            new Product("cams", 10, 129.95),
-            new Product("stoppers", 6, 79.49),
-            new Product("atc", 7, 49.99)];
+            new Product("quick draws(set)", 8, 59), 
+            new Product("runners", 17, 7), 
+            new Product("cams", 10, 129),
+            new Product("stoppers(set)", 6, 78),
+            new Product("atc", 7, 49)];
             this.tillTotal = tillTotal;
             this.sale = false;
         }
@@ -21,7 +21,12 @@ class Store {
         getItems() {
             return this.products
         }
+        getPrice(productIndex){
+            return this.products[productIndex].price;
+        }
     }
+
+
     
     console.log("hello from Store.js");
     export default Store;

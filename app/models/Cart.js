@@ -1,19 +1,33 @@
+let productsInCart = []
+let taxRate = 0
 class Cart {
-    constructor(
-        subTotal = 0,
-        tax = 0,
-        total = 0
-    ){
-        this.subTotal = subTotal;
-        this.tax = tax;
-        this.total = total;
+    constructor(taxrate){
+        taxRate = taxrate
     }
-    calculateTax(subTotalNow){
-        this.tax += subTotalNow*.06;
+    
+    addToCart(product){
+        productsInCart.push(product)
     }
-    calculateTotal(subTotalNow, taxNow){
-        this.total += subTotalNow + taxNow;
+
+    get cartSubTotal(){
+        let total = 0
+        productsInCart.forEach(p => total += p.price)
+        return total
     }
+
+    get cartTotal(){
+        return this.cartSubTotal * taxRate;
+    }
+
+    // addSubTotal(itemPrice){
+    //     return this.subTotal += itemPrice;
+    // }
+    // addTax(itemPrice){
+    //     return this.tax += itemPrice*.06;
+    // }
+    // addTotal(subTotalNow, taxNow){
+    //     this.total += subTotalNow + taxNow;
+    // }
 }
 
 console.log("hello from Cart.js");
