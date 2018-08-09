@@ -21,9 +21,15 @@ class Store {
         getItems() {
             return this.products
         }
-        getPrice(productIndex){
-            return this.products[productIndex].price;
+        updateQuantity(productIndex){
+            if (this.products[productIndex].quantity <= 0){
+                return 0
+            }
+            return this.products[productIndex].quantity--;
         }
+        // getPrice(productIndex){
+        //     return this.products[productIndex].price;
+        // }
     }
 
 

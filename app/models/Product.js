@@ -10,9 +10,6 @@ class Product {
         this.price = price;
         this.image = image;
     }
-    updateQuantity(amountBought){
-        this.quantity -= amountBought;
-    }
     sale(){
         this.price -= this.price*.1;
     }

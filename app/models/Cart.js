@@ -15,9 +15,14 @@ class Cart {
         return total
     }
 
-    get cartTotal(){
-        return this.cartSubTotal * taxRate;
+    get cartTax(){
+        return this.cartSubTotal * taxRate
     }
+
+    get cartTotal(){
+        return (this.cartSubTotal * taxRate) + this.cartSubTotal;
+    }
+
 
     // addSubTotal(itemPrice){
     //     return this.subTotal += itemPrice;

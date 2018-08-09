@@ -59,8 +59,9 @@ class StoreController {
     //     drawCart();
     // }
     addProductToCart(prodocutIndex) {
-       storeService.addProductToCart(prodocutIndex)
-       drawCart()
+       storeService.addProductToCart(prodocutIndex);
+       drawProducts();
+       drawCart();
         // this.addSubTotal(prodocutIndex);
         // this.addTax(prodocutIndex);
     }

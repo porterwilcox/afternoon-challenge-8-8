@@ -13,12 +13,15 @@ class StoreService {
     get Cart() {
         return {
             subTotal: yourCart.cartSubTotal,
-            tax: 0.06,
+            tax: yourCart.cartTax,
             total: yourCart.cartTotal
         }
     }
     addProductToCart(productIndex){
-        yourCart.addToCart(laTienda.products[productIndex])
+        let newQuantity = laTienda.updateQuantity(productIndex);
+        if (newQuantity){
+            yourCart.addToCart(laTienda.products[productIndex]);
+        }
     }
     // addSubTotal(productIndex){
     //     let productPrice = laTienda.getPrice(productIndex);
