@@ -15,9 +15,6 @@ class Store {
             this.tillTotal = tillTotal;
             this.sale = false;
         }
-        newTillTotal(purchaseTotal) {
-            this.tillTotal += purchaseTotal;
-        }
         getItems() {
             return this.products
         }
@@ -27,9 +24,9 @@ class Store {
             }
             return this.products[productIndex].quantity--;
         }
-        // getPrice(productIndex){
-        //     return this.products[productIndex].price;
-        // }
+        purchase(purchaseTotal){
+            this.tillTotal += purchaseTotal;
+        }
     }
 
 

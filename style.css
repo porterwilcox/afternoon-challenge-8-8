@@ -7,22 +7,33 @@
     display: flex;
     flex-flow: wrap column;
 }
-.purchase {
+.add-to-cart {
     height: fit-content;
     display: flex;
     justify-content: flex-end;
     padding-bottom: 1em;
 }
-.product-button {
+button {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: fit-content;
-    width: 75%;
-    font-size: 2em;
-    background-color: rgb(0, 89, 255);
     color: rgb(212, 208, 208);
+    font-size: 2em;
 }
-.product-button:hover {
+.product-button {
+    background-color: rgb(0, 89, 255);
+    width: 75%;
+}
+button:hover {
     color: whitesmoke;
+}
+.purchase-button {
+    background-color: rgb(36, 70, 36);
+    width: fit-content;
+}
+.bottom-pos {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
 }

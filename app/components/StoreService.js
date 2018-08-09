@@ -17,23 +17,22 @@ class StoreService {
             total: yourCart.cartTotal
         }
     }
+    get Store() {
+        return {
+            name: laTienda.name,
+            tillTotal: laTienda.tillTotal
+        }
+    }
     addProductToCart(productIndex){
         let newQuantity = laTienda.updateQuantity(productIndex);
         if (newQuantity){
             yourCart.addToCart(laTienda.products[productIndex]);
         }
     }
-    // addSubTotal(productIndex){
-    //     let productPrice = laTienda.getPrice(productIndex);
-    //     return yourCart.addSubTotal(productPrice);
-    // }
-    // addTax(productIndex){
-    //     let productPrice = laTienda.getPrice(productIndex);
-    //     return yourCart.addTax(productPrice);
-    // }
-    // addTotal(productIndex){
-        
-    // }
+    purchase(){
+        laTienda.purchase(yourCart.cartTotal);
+        yourCart.purchase();
+    }
 }
 
 console.log("hello from StoreService.js");

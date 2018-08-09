@@ -10,9 +10,6 @@ class Product {
         this.price = price;
         this.image = image;
     }
-    sale(){
-        this.price -= this.price*.1;
-    }
 }
 
 console.log("hello from Products.js");
