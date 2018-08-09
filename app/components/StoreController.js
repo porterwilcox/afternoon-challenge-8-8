@@ -12,7 +12,7 @@ function drawProducts() {
         template += `
         <div class="product-display">
         <div>
-        <img src="${product.image}" alt="product image" />
+        <img class="product-img" src="${product.image}" alt="product image" />
         </div>
         <h2>${product.name}</h2>
         <h3>$${product.price}</h3>
